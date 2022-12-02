@@ -15,7 +15,6 @@ function Amiibo(props)
     const [favorite, setFavorite] = useState(false)
 
     useEffect(() => {
-        console.log("inside param amiibo2 "+params.amiibo)
         if (props.amiiboList !==null)
         {
             setAmiibo(props.amiiboList.find(amiibo=>amiibo.tail===params.amiibo))
@@ -104,11 +103,6 @@ function Amiibo(props)
                         <Typography variant="body1">NA: {amiibo.release.na}</Typography>
                     </Grid>
                 </Grid>
-                {/* <Typography variant="h5">{amiibo.name}</Typography>
-                <Typography variant="body1">Amiibo Series: {amiibo.amiiboSeries}</Typography>
-                <Typography variant="body1">Game Series  : {amiibo.gameSeries}</Typography>
-                <Typography variant="body1">Release      :</Typography>
-                <Typography variant="body1">          AU : {amiibo.release.au}</Typography> */}
                 </CardContent>
             </Card>
             </Grid>
